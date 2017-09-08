@@ -15,15 +15,15 @@
     "url": "git+https://github.com/IIIemode/shortener-url.git"
   },
   "keywords": [
-    "test",
-    "study"
+    "short",
+    "link"
   ],
   "author": "DenisZhibenkov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/IIIemode/shortener-url/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/IIIemode/test#readme",
+  "homepage": "https://thought-out-tab.000webhostapp.com/index.php",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
