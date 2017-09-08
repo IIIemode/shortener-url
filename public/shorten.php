@@ -6,13 +6,15 @@
 
     if (isset($_POST['url'])) {
         $url = $_POST['url'];
+        $headers = get_headers($url);
 
-        if  ($code = $s->makeCode($url)) {
+        if (preg_match('/404/', $headers[0])) {
+            $_SESSION['feedback'] = "Error! Page not found!";
+        } else if ($code = $s->makeCode($url)) {
             $_SESSION['feedback'] = "Done! Here is your link <a href='{$s->getUrl($code)}'>http://localhost:8080/Shortener_URL/public/$code</a>";
         } else {
             $_SESSION['feedback'] = "Error! Perhaps an incorrect URl?";
         }
-        
 
     } else if (isset($_GET['codeOfUrl'])) {
         $massUrl = parse_url($_GET['codeOfUrl']);
